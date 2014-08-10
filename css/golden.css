@@ -1,0 +1,956 @@
+/* ==========================================================================
+   Eric Meyer's Reset
+   ========================================================================== */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ==========================================================================
+   Golden.css
+   ========================================================================== */
+
+/*
+ * Sections:
+ *
+ *   0. Common
+ *   1. Header
+ *   2. Hero
+ *   3. Services
+ *   4. Portfolio
+ *   5. About
+ *   6. Team
+ *   7. Clients
+ *   8. Contact
+ *   9. Footer
+ */
+
+/* 0. Common
+   ========================================================================== */
+
+html {
+  /* Display & Box Model */
+  box-sizing: border-box;
+  margin-top: -120px;
+
+  /* Text */
+  font-size: 10px;
+  text-align: center; 
+
+  /* Other */  
+  background: #fff;
+  color: #777;
+}
+
+*, *:before, *:after {
+  /* Display & Box Model */
+  box-sizing: inherit;
+}
+
+a {
+  /* Text */
+  text-decoration: none;
+
+  /* Other */
+  color: inherit;
+}
+
+.button {
+  /* Display & Box Model */
+  display: inline-block;
+  width: 240px;
+  padding: 21.5px 0;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+
+  /* Text */
+  font: bold 1.8rem Montserrat, sans-serif;
+  text-transform: uppercase;
+
+  /* Other */
+  background: #fed136;
+  color: #fff;
+}
+
+.roundedButton {
+  /* Display & Box Model */
+  display: inline-block;
+  width: 169px;
+  height: 169px;
+  padding: 52px 22px;
+  border: 7px solid #f1f1f1;
+  border-radius: 50%;
+
+  /* Text */
+  font: 1.8rem Montserrat, sans-serif;
+  text-transform: uppercase;
+
+  /* Other */
+  background: #fed136;
+  color: #fff;
+}
+
+#services > header,
+#portfolio > header,
+#about > header,
+#team > header,
+#contact > header {
+  /* Display & Box Model */
+  width: 80%;
+  margin: 0 auto 77px;
+}
+
+#services > header > h1,
+#portfolio > header > h1,
+#about > header > h1,
+#team > header > h1,
+#contact > header > h1 {
+  /* Display & Box Model */
+  margin-bottom: 8px;
+
+  /* Text */
+  font: bold 4rem Montserrat, sans-serif;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+
+  /* Other */
+  color: #222; 
+}
+
+#services > header > p,
+#portfolio > header > p,
+#about > header > p,
+#team > header > p,
+#contact > header > p {
+  /* Text */
+  font: italic 1.6rem "Droid Serif", serif;
+}
+
+/* 1. Header
+   ========================================================================== */
+
+body > header {
+  /* Positioning */
+  position: relative;
+  z-index: 10;
+  top: 120px;
+
+  /* Display & Box Model */
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
+  width: 80%;
+  height: 28px;
+  margin: 44px auto 48px;
+}
+
+body > header > a {
+  /* Display & Box Model */
+  height: inherit;
+  margin-left: 7px;
+}
+
+nav {
+  /* Display & Box Model */
+  margin-top: 3px;
+
+  /* Text */
+  font: 1.4rem Montserrat, sans-serif;
+  text-transform: uppercase;
+
+  /* Other */ 
+  color: #fff;
+}
+
+nav > ul {
+  /* Display & Box Model */
+  display: flex;
+}
+
+nav > ul > li {
+  /* Display & Box Model */
+  margin-left: 40px;
+}
+
+nav a {
+  /* Other */
+  transition: color 0.3s linear;
+}
+
+nav a:hover {
+  /* Other */
+  color: #fed136;
+}
+
+@media only screen and (max-width: 760px) {
+  nav {
+    /* Display & Box Model */
+    flex-direction: column;
+  } 
+
+  nav > ul {
+    /* Display & Box Model */
+    flex-direction: column;
+  }
+
+  nav > ul > li {
+    /* Display & Box Model */
+    margin: 8px;
+
+    /* Text */
+    text-align: right;
+  }
+}
+
+/* 2. Hero
+   ========================================================================== */
+
+#hero {
+  /* Positioning */
+  position: relative;
+
+  /* Display & Box Model */
+  max-width: 1400px;
+  min-height: 700px;
+  padding-bottom: 160px;
+  margin: 0 auto;
+
+  /* Other */
+  background: url(../img/hero/background.jpg) top center;
+  background-size: cover;
+  color: #fff;
+}
+
+#hero > header {
+  /* Display & Box Model */
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  padding-top: 271px;
+}
+
+#hero > header > h1 {
+  /* Display & Box Model */
+  max-width: 80%;
+  margin: 24px auto 41px;
+
+  /* Text */
+  font: bold 7.5rem Montserrat, sans-serif;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+#hero > header > h2 {
+  /* Display & Box Model */
+  max-width: 80%;
+  margin: 0 auto;
+
+  /* Text */
+  font: italic 4rem "Droid Serif", serif;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+}
+
+/* 3. Services
+   ========================================================================== */
+
+#services {
+  /* Display & Box Model */
+  padding: 110px 0 74px;
+}
+
+#services > div {
+  /* Display & Box Model */
+  display: flex;
+  justify-content: space-between;
+  max-width: 940px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#services > div > section {
+  /* Display & Box Model */
+  flex-basis: 29.77234%;
+  margin-bottom: 40px;
+}
+
+services > div > section > img {
+  /* Display & Box Model */
+  border-radius: 50%;
+}
+
+#services > div > section > h2 {
+  /* Display & Box Model */
+  padding: 18px 0 9px;
+
+  /* Text */
+  font: bold 1.8rem Montserrat, sans-serif;
+  letter-spacing: -0.5px;
+
+  /* Other */
+  color: #222;
+}
+
+#services > div > section > p {
+  /* Text */
+  font: 1.4rem/1.57142857142857 "Droid Serif", serif;
+  letter-spacing: -0.3px;
+}
+
+@media only screen and (max-width: 940px) {
+  /* Display & Box Model */
+  #services > div {
+    flex-direction: column;
+  }
+
+  /* Display & Box Model */
+  #services > div > section {
+    flex-basis: auto;
+  }
+
+  /* Display & Box Model */
+  #services > div > section > p {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+/* 4. Portfolio
+   ========================================================================== */
+
+#portfolio {
+  /* Display & Box Model */
+  padding: 110px 0 70px;
+
+  /* Other */
+  background: #f7f7f7;
+}
+
+#portfolio > div {
+  /* Display & Box Model */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 940px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -1px;
+}
+
+#portfolio figure {
+  /* Display & Box Model */
+  flex-basis: 30.851063%;
+  margin-bottom: 50px;
+
+  /* Other */
+  background: #fff;
+}
+
+#portfolio figure > img {
+  /* Display & Box Model */
+  width: 100%;
+  height: auto;
+}
+
+#portfolio figure > figcaption {
+  /* Display & Box Model */
+  padding: 23px 20px 28px;
+}
+
+#portfolio figure > figcaption {
+  /* Text */
+  font: bold 1.8rem Montserrat, sans-serif;
+  letter-spacing: -0.7px;
+
+  /* Other */
+  color: #333;
+}
+
+#portfolio figure > figcaption .category {
+  /* Display & Box Model */
+  margin-top: 1px;
+
+  /* Text */
+  font: italic 1.4rem "Droid Serif", serif;
+  letter-spacing: 0.1px;
+}
+
+#portfolio figure > figcaption .category li {
+  /* Display & Box Model */
+  display: inline-block;
+
+  /* Text */
+  white-space: pre;
+}
+
+#portfolio figure > figcaption .category li:not(:last-child):after {
+  /* Other */
+  content: ", ";
+}
+
+@media only screen and (max-width: 940px) {
+  #portfolio figure {
+    /* Display & Box Model */
+    flex-basis: 47.682119%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #portfolio figure {
+    /* Display & Box Model */
+    flex-basis: 100%;
+  }
+}
+
+/* 5. About
+   ========================================================================== */
+
+#about {
+  /* Display & Box Model */
+  max-width: 940px;
+  width: 80%;
+  padding: 110px 0 114px;
+  margin: 0 auto;
+}
+
+#about > article {
+  /* Display & Box Model */
+  display: flex;
+}
+
+#about > article:nth-child(odd) {
+  /* Display & Box Model */
+  margin-left: calc(50% - 130px);
+}
+
+#about > article:nth-child(even) {
+  /* Display & Box Model */
+  flex-direction: row-reverse;
+  margin-right: calc(50% - 130px);
+}
+
+#about > article:nth-child(even) .text {
+  /* Text */
+  text-align: right;
+}
+
+#about > article:nth-child(odd) .text {
+  /* Text */
+  text-align: left;
+}
+
+#about > article > figure {
+  /* Display & Box Model */
+  flex: 0 0 260px;
+  padding-bottom: 93px;
+
+  /* Other */
+  background: url(../img/about/stripe.png) repeat-y center;
+}
+
+#about > article > figure > img {
+  /* Display & Box Model */
+  border: 7px solid #f1f1f1;
+  border-radius: 50%;
+}
+
+#about > article > .text {
+  /* Display & Box Model */
+  padding: 3px 2px 0 2px;
+}
+
+#about > article > .text > time,
+#about > article > .text > h2 {
+  /* Text */
+  font: bold 1.8rem Montserrat, sans-serif;
+  letter-spacing: -0.5px;
+
+  /* Other */
+  color: #222;
+}
+
+#about > article > .text > time {
+  /* Text */
+  text-transform: uppercase;
+}
+
+#about > article > .text > h2 {
+  /* Display & Box Model */
+  padding: 4px 0 11px;
+
+  /* Text */
+  text-transform: capitalize;
+}
+
+#about > article > .text > p {
+  /* Text */
+  font: 1.4rem/1.57142857142857 "Roboto Slab", serif;
+  letter-spacing: -0.4px;
+}
+
+#about > article > .text > p:nth-child(n+2):last-child {
+  /* Display & Box Model */
+  padding-bottom: 93px;
+}
+
+#about > a:after {
+  /* Other */
+  content: " ...";
+}
+
+@media only screen and (max-width: 940px) {
+  #about > article {
+    /* Display & Box Model */
+    margin: auto !important;
+  }
+
+  #about > article > figure {
+    /* Other */
+    background: none;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #about > article > figure {
+    /* Display & Box Model */
+    display: none;
+  }
+}
+
+/* 6. Team
+   ========================================================================== */
+
+#team {
+  /* Display & Box Model */
+  padding: 109px 0 115px;
+  
+  /* Other */
+  background: #f9f9f9;
+}
+
+#team > header > h1 {
+  /* Display & Box Model */
+  margin-bottom: 13px;
+
+  /* Text */
+  letter-spacing: -2px;
+}
+
+#staff {
+  /* Display & Box Model */
+  display: flex;
+  justify-content: space-between;
+  max-width: 794px;
+  width: 80%;
+  margin: 0 auto;
+
+  /* Text */
+  text-transform: capitalize;
+}
+
+#staff > li {
+  /* Display & Box Model */
+  max-width: 234px;
+  margin-bottom: 30px;
+}
+
+#staff dl {
+  /* Display & Box Model */
+  display: flex;
+  flex-direction: column;
+}
+
+#staff dt {
+  /* Display & Box Model */
+  margin-bottom: 2px;
+
+  /* Text */
+  font: bold 1.6rem Montserrat, sans-serif;
+  letter-spacing: -0.5px;
+
+  /* Other */
+  color: #222;
+}
+
+#staff dd {
+  /* Text */
+  font: 1.4rem/1.57142857142857 "Roboto Slab", serif;
+  letter-spacing: -0.4px;
+}
+
+#staff dd:nth-child(2) {
+  /* Display & Box Model */
+  order: -1;
+}
+
+#staff dd > img {
+  /* Display & Box Model */
+  border: 7px solid #fff;
+  margin-bottom: 10px;
+}
+
+#staff img {
+  /* Display & Box Model */
+  border-radius: 50%;
+}
+
+#staff .social {
+  /* Display & Box Model */
+  margin: 9px 0;
+}
+
+#staff .social li {
+  /* Display & Box Model */
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 3.5px;
+}
+
+#staff .social li img {
+  /* Display & Box Model */
+  border-radius: 50%;
+
+  /* Other */
+  background: #f9f9f9;
+  transition: 0.2s opacity ease;
+}
+
+#staff .social li img:hover {
+  /* Other */
+  opacity: 0;
+}
+
+#staff .twitter {
+  /* Other */
+  background: url(../img/team/twitter-hover.png);
+}
+
+#staff .facebook {
+  /* Other */
+  background: url(../img/team/facebook-hover.png);
+}
+
+#staff .pinterest {
+  /* Other */
+  background: url(../img/team/pinterest-hover.png);
+}
+
+#staff .googleplus {
+  /* Other */
+  background: url(../img/team/googleplus-hover.png);
+}
+
+#team > p {
+  /* Display & Box Model */
+  max-width: 650px;
+  margin: 1px auto 0;
+
+  /* Text */
+  font: 1.6rem/1.5 "Roboto Slab", serif;
+  letter-spacing: -0.41px;
+}
+
+@media only screen and (max-width: 940px) {
+  #staff  {
+    /* Display & Box Model */
+    flex-direction: column;
+  }
+
+  #staff > li {
+    /* Display & Box Model */
+    margin: 0 auto;
+  }
+
+  #team > p {
+    /* Display & Box Model */
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+/* 7. Clients
+   ========================================================================== */
+
+#clients {
+  /* Display & Box Model */
+  width: 80%;
+  padding: 40px 0 39px;
+  margin: 0 auto;
+}
+
+#clients li {
+  /* Positioning */
+  position: relative;
+
+  /* Display & Box Model */
+  display: inline-block;
+  margin: 20px;
+}
+
+#clients li:nth-child(1) {
+  /* Positioning */
+  top: -5px;
+  left: -1px;
+}
+
+#clients li:nth-child(2) {
+  /* Positioning */
+  top: 1px;
+  left: 3px;
+}
+
+#clients li:nth-child(3) {
+  /* Positioning */
+  top: -1px;
+  left: -1px;
+}
+
+#clients li:nth-child(4) {
+  /* Positioning */
+  left: -2px;
+}
+
+@media only screen and (max-width: 1005px) {
+  #clients {
+    /* Display & Box Model */
+    max-width: 590px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  #clients li {
+    /* Display & Box Model */
+    display: block;
+  }
+}
+
+/* 8. Contact
+   ========================================================================== */
+
+#contact {
+  /* Display & Box Model */
+  max-width: 1400px;
+  min-height: 676px;
+  padding: 100px 0 114px;
+  margin: 0 auto;
+
+  /* Other */
+  background: #222 url(../img/contact/background.png);
+  background-size: cover;
+}
+
+#contact > header {
+  /* Display & Box Model */
+  margin-bottom: 76px;
+}
+
+#contact > header > h1 {
+  /* Display & Box Model */
+  margin-bottom: 12px;
+
+  /* Other */
+  color: #fff;
+}
+
+#contact > form {
+  /* Display & Box Model */
+  max-width: 940px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#contact form > div {
+  /* Postioning */
+  float: left;
+
+  /* Display & Box Model */
+  width: 48.40425531914894%;
+}
+
+#contact input:not(.button) {
+  /* Display & Box Model */
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+#contact textarea {
+  /* Positioning */
+  float: right;
+
+  /* Display & Box Model */
+  width: 48.40425531914894%;
+  height: 210px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 20px;
+  margin-bottom: 30px;
+  outline: none;
+  resize: none;
+}
+
+#contact input.button {
+  /* Positioning */
+  clear: both;
+
+  /* Display & Box Model */ 
+  display: block;
+  margin: 0 auto;
+
+  /* Other */
+  cursor: pointer;
+}
+
+input[placeholder], textarea[placeholder] {
+  /* Text */
+  text-transform: uppercase;
+  font: bold 1.4rem Montserrat, sans-serif;
+
+  /* Other */
+  color: #bbb;
+}
+
+@media only screen and (max-width: 940px) {
+  #contact form > div, #contact textarea {
+    width: 100%;
+  }
+}
+
+/* 9. Footer
+   ========================================================================== */
+footer {
+  /* Positioning */
+  position: relative;
+
+  /* Display & Box Model */
+  max-width: 940px;
+  width: 80%;
+  margin: 0 auto;  
+}
+
+footer small {
+  /* Positioning */
+  position: absolute;
+  top: 20px;
+  left: 1px;
+
+  /* Text */
+  font: 1.4rem/1.57142857142857 Montserrat, sans-serif;
+  letter-spacing: -0.4px;
+
+  /* Other */
+  color: #555;
+}
+
+footer .social {
+  /* Display & Box Model */
+  display: block;
+  padding: 11px 0 18px;
+}
+
+footer .social li {
+  /* Display & Box Model */
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+footer .social li img {
+  /* Display & Box Model */
+  border-radius: 50%;
+
+  /* Other */
+  transition: 0.2s opacity ease;
+}
+
+footer .social li img:hover {
+  /* Display & Box Model */
+  opacity: 0;
+}
+
+footer .twitter {
+  /* Other */
+  background: url(../img/footer/twitter-hover.png);
+}
+
+footer .facebook {
+  /* Other */
+  background: url(../img/footer/facebook-hover.png);
+}
+
+footer .pinterest {
+  /* Other */
+  background: url(../img/footer/pinterest-hover.png);
+}
+
+footer .googleplus {
+  /* Other */
+  background: url(../img/footer/googleplus-hover.png);
+}
+
+@media only screen and (max-width: 940px) {
+  footer small {
+    /* Positioning */
+    position: relative;
+
+    /* Display & Box Model */
+    display: block;
+    margin: 0 auto 30px;
+  }
+}
